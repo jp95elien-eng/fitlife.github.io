@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0b0b0b;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+html {
+  scroll-padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+}
+
+header {
+  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(230,57,70,0.75) 100%), 
+              url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center 30%;
+  padding: 140px 20px 120px;
+  text-align: center;
+  border-bottom: 4px solid #e63946;
+}
+header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #ff9a9e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+header p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px black;
+}
+.btn-header {
+  background: #e63946;
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 60px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(230,57,70,0.4);
+}
+.btn-header:hover {
+  background: #ff4d4d;
+  transform: scale(1.05);
+}
+
+nav {
+  background: #111111dd;
+  backdrop-filter: blur(12px);
+  background-color: rgba(10, 10, 10, 0.95);
+  text-align: center;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #e63946;
+}
+nav a {
+  color: #f0f0f0;
+  margin: 0 22px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.2s;
+  position: relative;
+}
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e63946;
+  transition: 0.3s;
+}
+nav a:hover:after {
+  width: 100%;
+}
+nav a:hover {
+  color: #ff6b6b;
+}
+
+section {
+  padding: 60px 30px;
+  max-width: 1300px;
+  margin: 40px auto;
+  background: #141414;
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  border-left: 6px solid #e63946;
+}
+section:hover {
+  box-shadow: 0 20px 40px rgba(230,57,70,0.2);
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #e63946;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+h3 {
+  color: #ff6b6b;
+  font-size: 1.8rem;
+  margin: 25px 0 15px;
+}
+
+.image-container {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+.image-container img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  transition: 0.3s;
+  border: 1px solid #2c2c2c;
+}
+.image-container img:hover {
+  transform: scale(1.01);
+}
+
+.texto-destacado {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicios-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 30px 0 20px;
+}
+.servicio-item {
+  background: #1f1f1f;
+  padding: 25px 20px;
+  border-radius: 24px;
+  flex: 1 1 220px;
+  text-align: center;
+  border-bottom: 3px solid #e63946;
+  transition: 0.25s;
+}
+.servicio-item i {
+  font-size: 2.8rem;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+.servicio-item strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: white;
+}
+.servicio-item:hover {
+  transform: translateY(-8px);
+  background: #262626;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: 0.4s;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+  border: 1px solid #2e2e2e;
+}
+.gallery img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.08);
+  border-color: #e63946;
+  box-shadow: 0 12px 28px rgba(230,57,70,0.3);
+}
+
+.plans-table-wrapper {
+  overflow-x: auto;
+  margin: 30px 0;
+}
+.plans-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.plans-table th,
+.plans-table td {
+  padding: 18px 15px;
+  text-align: center;
+  font-weight: 500;
+}
+.plans-table th {
+  background: #232323;
+  color: #e63946;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e63946;
+}
+.plans-table td {
+  border-bottom: 1px solid #2c2c2c;
+}
+.plans-table tr:last-child td {
+  border-bottom: none;
+}
+.plans-table tr:hover td {
+  background: #202020;
+}
+.premium-badge {
+  background: #e63946;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 40px;
+  padding: 4px 12px;
+  margin-left: 10px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #e63946;
+  color: white;
+  padding: 14px 38px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  margin: 20px auto;
+  text-align: center;
+  transition: 0.25s;
+  box-shadow: 0 6px 14px rgba(230,57,70,0.4);
+  border: none;
+  cursor: pointer;
+}
+.cta-button:hover {
+  background: #ff4d4d;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(230,57,70,0.6);
+}
+
+/* ========== ESTILOS TARJETAS GIRATORIAS ========== */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+  perspective: 1000px;
+}
+
+.trainer-card {
+  background: transparent;
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.trainer-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #1c1c1c;
+  border: 1px solid #2d2d2d;
+}
+
+/* FRONTAL */
+.card-front {
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+}
+.card-front img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.card-front h4 {
+  font-size: 1.5rem;
+  margin: 18px 0 5px;
+  color: #ff9f9f;
+}
+.card-front p {
+  padding: 0 15px 20px;
+  color: #bbbbbb;
+  font-weight: 400;
+}
+.card-front i {
+  color: #e63946;
+  margin-right: 6px;
+}
+
+/* TRASERA (reseña) */
+.card-back {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  border-top: 4px solid #e63946;
+}
+.card-back i.fa-quote-left {
+  font-size: 2rem;
+  color: #e63946;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+.card-back p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.reseña-firma {
+  color: #ff9f9f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+/* ============================================= */
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 40px 0 20px;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 30px;
+}
+.contact-card {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 24px;
+}
+.contact-card i {
+  font-size: 2.2rem;
+  color: #e63946;
+  margin-bottom: 12px;
+}
+.contact-card p {
+  font-weight: 500;
+}
+
+footer {
+  background: #0c0c0c;
+  padding: 35px 20px;
+  text-align: center;
+  border-top: 2px solid #e63946;
+  margin-top: 50px;
+}
+.social-icons {
+  margin: 20px 0 15px;
+}
+.social-icons a {
+  color: #ddd;
+  font-size: 1.8rem;
+  margin: 0 12px;
+  transition: 0.2s;
+  display: inline-block;
+}
+.social-icons a:hover {
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+@media (max-width: 780px) {
+  header h1 {
+    font-size: 2.6rem;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  nav a {
+    margin: 0 12px;
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 35px 20px;
+    margin: 25px 15px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .trainer-card {
+    height: 380px;
+  }
+  .card-front img {
+    height: 220px;
+  }
+}
