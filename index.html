@@ -8,10 +8,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- HERO MEJORADO -->
   <header>
-    <h1>FITLIFE GYM</h1>
-    <p>Entrena con pasión, transforma tu realidad</p>
-    <a href="#planes" class="btn-header"><i class="fas fa-dumbbell"></i> Comienza ahora</a>
+    <h1>¡Desata tu mejor versión en FitLife Gym!</h1>
+    <p>No esperes al lunes. Tu transformación comienza hoy con una clase de prueba totalmente gratuita.</p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-header btn-primary"><i class="fas fa-calendar-check"></i> Reserva tu clase GRATIS ahora</a>
+      <a href="#planes" class="btn-header btn-secondary">Ver planes y precios</a>
+    </div>
   </header>
 
   <nav>
@@ -19,6 +23,7 @@
     <a href="#servicios"><i class="fas fa-heartbeat"></i> Servicios</a>
     <a href="#entrenadores"><i class="fas fa-users"></i> Entrenadores</a>
     <a href="#planes"><i class="fas fa-calendar-alt"></i> Planes</a>
+    <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
     <a href="#contacto"><i class="fas fa-phone-alt"></i> Contacto</a>
   </nav>
 
@@ -33,16 +38,33 @@
     </div>
   </section>
 
+  <!-- SERVICIOS CON NUEVO COPY -->
   <section id="servicios">
     <h2>Servicios de élite</h2>
     <div class="image-container">
       <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Clase grupal">
     </div>
     <div class="servicios-list">
-      <div class="servicio-item"><i class="fas fa-user-check"></i><strong>Entrenamiento Personalizado</strong>Plan 1:1</div>
-      <div class="servicio-item"><i class="fas fa-users"></i><strong>Clases Grupales</strong>Yoga, Zumba, CrossFit</div>
-      <div class="servicio-item"><i class="fas fa-heartbeat"></i><strong>Zona Cardio & Pesas</strong>Equipamiento premium</div>
-      <div class="servicio-item"><i class="fas fa-apple-alt"></i><strong>Nutrición Deportiva</strong>Asesoría profesional</div>
+      <div class="servicio-item">
+        <i class="fas fa-user-check"></i>
+        <strong>Tu cuerpo, tus metas, tu plan.</strong>
+        <p>Olvídate de rutinas genéricas. Diseñamos un programa a medida que se adapta a tu ritmo, historial y objetivos. Maximiza cada repetición con la atención exclusiva que mereces.</p>
+      </div>
+      <div class="servicio-item">
+        <i class="fas fa-users"></i>
+        <strong>Energía que contagia, comunidad que impulsa.</strong>
+        <p>Entrena al ritmo de la música o desafía tus límites en un ambiente de alta energía. Desde la calma del Yoga hasta la intensidad del CrossFit, encuentra tu clase favorita y sudarás junto a otros motivados.</p>
+      </div>
+      <div class="servicio-item">
+        <i class="fas fa-heartbeat"></i>
+        <strong>Potencia tu rendimiento sin esperas.</strong>
+        <p>Accede a equipos de última generación y una zona de pesas de alto rendimiento. Diseñada para que entrenes fluido, sin colas y al máximo de tu capacidad.</p>
+      </div>
+      <div class="servicio-item">
+        <i class="fas fa-apple-alt"></i>
+        <strong>Combustible inteligente para tu cuerpo.</strong>
+        <p>Más que una dieta, es educación nutricional. Aprende a comer para potenciar tu energía, acelerar tu recuperación y alcanzar tu peso ideal sin dietas restrictivas.</p>
+      </div>
     </div>
     <h3 style="text-align:center; margin-top:40px;">⚡ Nuestras instalaciones ⚡</h3>
     <div class="gallery">
@@ -57,78 +79,88 @@
     </div>
   </section>
 
-  <!-- SECCIÓN ENTRENADORES CON TARJETAS GIRATORIAS -->
+  <!-- ENTRENADORES OPTIMIZADOS (resumen + reseña completa con clic/hover) -->
   <section id="entrenadores">
     <h2>Nuestros expertos</h2>
-    <p style="text-align:center; margin-bottom:20px;">Entrenadores certificados, pasión por tus resultados.<br>✨ Pasa el cursor sobre cada tarjeta para conocer su reseña ✨</p>
+    <p style="text-align:center; margin-bottom:20px;">Entrenadores certificados, pasión por tus resultados.<br>✨ Pasa el cursor o toca la tarjeta para conocer su reseña completa ✨</p>
     <div class="trainers-grid">
       
       <!-- Marcos Rivera -->
-      <div class="trainer-card">
+      <div class="trainer-card" onclick="this.classList.toggle('flipped')">
         <div class="card-inner">
           <div class="card-front">
             <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Marcos Rivera">
             <h4>Marcos Rivera</h4>
-            <p><i class="fas fa-dumbbell"></i> Especialista en fuerza</p>
+            <p><i class="fas fa-dumbbell"></i> Especialista en Fuerza</p>
+            <div class="resumen">Con más de 10 años en powerlifting, te enseño a romper tus récords con técnica segura.</div>
+            <span class="ver-resena">👆 Ver reseña completa</span>
           </div>
           <div class="card-back">
             <i class="fas fa-quote-left"></i>
-            <p>"Ayudo a mis alumnos a romper sus récords con técnicas avanzadas de levantamiento. Más de 10 años de experiencia en powerlifting."</p>
+            <p>"Ayudo a mis alumnos a romper sus récords con técnicas avanzadas de levantamiento. Si buscas fuerza real y un cuerpo sólido, este es tu lugar."</p>
             <span class="reseña-firma">— Marcos</span>
           </div>
         </div>
       </div>
 
       <!-- Laura Méndez -->
-      <div class="trainer-card">
+      <div class="trainer-card" onclick="this.classList.toggle('flipped')">
         <div class="card-inner">
           <div class="card-front">
             <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Laura Méndez">
             <h4>Laura Méndez</h4>
             <p><i class="fas fa-heart"></i> Nutrición + HIIT</p>
+            <div class="resumen">La combinación perfecta de alimentación de precisión y entrenamiento de alta intensidad.</div>
+            <span class="ver-resena">👆 Ver reseña completa</span>
           </div>
           <div class="card-back">
             <i class="fas fa-quote-left"></i>
-            <p>"Combino nutrición de precisión con entrenamiento funcional de alta intensidad. He transformado más de 500 vidas."</p>
+            <p>"He transformado más de 500 vidas combinando ciencia nutricional con sesiones de HIIT. No se trata solo de sudar, se trata de nutrirte para lograr resultados duraderos."</p>
             <span class="reseña-firma">— Laura</span>
           </div>
         </div>
       </div>
 
       <!-- Javier Ruiz -->
-      <div class="trainer-card">
+      <div class="trainer-card" onclick="this.classList.toggle('flipped')">
         <div class="card-inner">
           <div class="card-front">
             <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Javier Ruiz">
             <h4>Javier Ruiz</h4>
             <p><i class="fas fa-bolt"></i> CrossFit & Calistenia</p>
+            <div class="resumen">Campeón regional listo para mejorar tu resistencia, agilidad y fuerza en solo 8 semanas.</div>
+            <span class="ver-resena">👆 Ver reseña completa</span>
           </div>
           <div class="card-back">
             <i class="fas fa-quote-left"></i>
-            <p>"Campeón regional de CrossFit. Mi método mejora tu resistencia, agilidad y fuerza en solo 8 semanas."</p>
+            <p>"Mi método va más allá del ejercicio; construye un cuerpo funcional. En 8 semanas verás una diferencia clara en tu agilidad y potencia."</p>
             <span class="reseña-firma">— Javier</span>
           </div>
         </div>
       </div>
 
       <!-- Valeria Soto -->
-      <div class="trainer-card">
+      <div class="trainer-card" onclick="this.classList.toggle('flipped')">
         <div class="card-inner">
           <div class="card-front">
             <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Valeria Soto">
             <h4>Valeria Soto</h4>
-            <p><i class="fas fa-peace"></i> Yoga y Movilidad consciente</p>
+            <p><i class="fas fa-peace"></i> Yoga y Movilidad Consciente</p>
+            <div class="resumen">Instructora certificada en yoga terapéutico para encontrar equilibrio y paz interior.</div>
+            <span class="ver-resena">👆 Ver reseña completa</span>
           </div>
           <div class="card-back">
             <i class="fas fa-quote-left"></i>
-            <p>"Instructora certificada en yoga terapéutico. Te ayudaré a encontrar equilibrio, flexibilidad y paz interior."</p>
+            <p>"El yoga no es solo flexibilidad; es sanación. Te guiaré hacia un estado de equilibrio mental y físico que te acompañará fuera del mat."</p>
             <span class="reseña-firma">— Valeria</span>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- PLANES MEJORADOS -->
   <section id="planes">
     <h2>Planes diseñados para ti</h2>
     <div class="image-container">
@@ -137,41 +169,73 @@
     <div class="plans-table-wrapper">
       <table class="plans-table">
         <thead>
-          <tr><th>Plan</th><th>Precio Mensual</th><th>Beneficios</th></tr>
+          <tr><th>Plan</th><th>Precio Mensual</th><th>Beneficios</th><th>Acción</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>🔥 Básico</strong></td>
+            <td><strong>🔥 Básico</strong><br><span style="font-size:0.8rem; color:#aaa;">Ideal para: Autodidactas que buscan libertad.</span></td>
             <td>$100</td>
-            <td>Acceso pesas/cardio • Horario libre</td>
+            <td>Acceso ilimitado a zona de pesas y cardio<br>Horarios libres<br>Uso de vestuarios</td>
+            <td><a href="#contacto" class="plan-btn">Elegir Básico</a></td>
           </tr>
           <tr>
-            <td><strong>⚡ Estándar</strong></td>
+            <td><strong>⚡ Estándar</strong><br><span style="font-size:0.8rem; color:#aaa;">Ideal para: Quienes buscan variedad y comunidad.</span></td>
             <td>$200</td>
-            <td>Todo anterior + 2 clases grupales/mes</td>
+            <td>Todo lo del plan Básico<br>+ 2 clases grupales al mes (Zumba, Yoga, CrossFit)<br>+ Acceso a talleres mensuales</td>
+            <td><a href="#contacto" class="plan-btn">Elegir Estándar</a></td>
           </tr>
           <tr>
-            <td><strong>👑 Premium <span class="premium-badge">MÁS ELEGIDO</span></strong></td>
+            <td><strong>👑 Premium <span class="premium-badge">MÁS ELEGIDO</span></strong><br><span style="font-size:0.8rem; color:#aaa;">Ideal para: Resultados rápidos y soporte total.</span></td>
             <td>$300</td>
-            <td>Acceso total • Clases ilimitadas • Nutricionista</td>
+            <td>Acceso total ilimitado a todas las clases<br>Asesoría nutricional personalizada<br>Entrenamiento 1:1 mensual<br>Prioridad en reservas</td>
+            <td><a href="#contacto" class="plan-btn premium-btn">Quiero el Plan Premium</a></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div style="text-align:center;">
-      <a href="#contacto" class="cta-button"><i class="fas fa-hand-holding-heart"></i> ¡Inscríbete ahora!</a>
+    <div style="text-align:center; margin-top:20px;">
+      <p style="color:#aaa; font-size:0.9rem;">¿Necesitas flexibilidad? Consulta nuestros planes anuales con descuento.</p>
     </div>
   </section>
 
+  <!-- NUEVA SECCIÓN FAQ -->
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>¿Necesito experiencia previa para unirme?</h4>
+        <p>¡Para nada! Nuestros entrenadores adaptan cada ejercicio a tu nivel actual, ya seas principiante o atleta avanzado.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Los planes tienen contrato de permanencia?</h4>
+        <p>Ofrecemos flexibilidad. Puedes elegir entre planes mensuales sin ataduras o tarifas preferenciales anuales, tú decides qué se ajusta a tu estilo de vida.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Puedo cancelar si necesito viajar o tengo una lesión?</h4>
+        <p>Sí, entendemos que la vida cambia. Ofrecemos opciones de pausa temporal para viajes o lesiones, consulta los detalles con nuestro equipo.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Necesito traer mi propio equipo?</h4>
+        <p>No. En FitLife Gym te proporcionamos toallas, agua y todo el equipamiento necesario. Solo trae ropa cómoda y mucha energía.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Cómo funciona la asesoría de nutrición en el plan Premium?</h4>
+        <p>Incluye una evaluación inicial con nuestro nutricionista, un plan de alimentación personalizado y seguimiento mensual para ajustar tu progreso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO OPTIMIZADO -->
   <section id="contacto">
     <h2>Conecta con nosotros</h2>
+    <p style="text-align:center; font-size:1.2rem; margin-bottom:20px;">¿Listo para empezar? Nos vemos en el gimnasio.</p>
     <div class="image-container">
       <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Recepción">
     </div>
     <div class="contact-info">
-      <div class="contact-card"><i class="fas fa-map-marker-alt"></i><p><strong>📍 Dirección</strong><br>Av. Principal 403, jalapa</p></div>
-      <div class="contact-card"><i class="fas fa-phone-alt"></i><p><strong>📞 Teléfono</strong><br>+123 456 180</p></div>
-      <div class="contact-card"><i class="fas fa-envelope"></i><p><strong>✉️ Email</strong><br>info@fitlifegym.com</p></div>
+      <div class="contact-card"><i class="fas fa-map-marker-alt"></i><p><strong>📍 Visítanos</strong><br>Av. Principal 403, Jalapa.<br><span style="font-size:0.9rem; color:#aaa;">Pregunta por nuestro estacionamiento gratuito.</span></p></div>
+      <div class="contact-card"><i class="fas fa-phone-alt"></i><p><strong>📞 Llámanos</strong><br>+123 456 180<br><span style="font-size:0.9rem; color:#aaa;">Atención de 8:00 a 20:00</span></p></div>
+      <div class="contact-card"><i class="fas fa-envelope"></i><p><strong>✉️ Escríbenos</strong><br>info@fitlifegym.com</p></div>
       <div class="contact-card"><i class="fas fa-clock"></i><p><strong>🕒 Horarios</strong><br>Lun-Vie 6:00-22:00<br>Sáb-Dom 8:00-18:00</p></div>
     </div>
   </section>
@@ -183,8 +247,21 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-    <p>&copy; 2026 FitLife Gym - Todos los derechos reservados.</p>
-    <p style="margin-top:10px;">🔥 Transformación, disciplina y comunidad 🔥</p>
+    <p>&copy; 2026 FitLife Gym - Transformación, disciplina y comunidad. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Pequeño script para que en móviles el clic en la tarjeta funcione correctamente.
+    // También permite que el hover en desktop siga funcionando.
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.trainer-card');
+      cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          // Evita que el clic en el botón "Ver reseña" duplique el toggle
+          // pero el toggle ya está en el onclick de la tarjeta
+        });
+      });
+    });
+  </script>
 </body>
 </html>

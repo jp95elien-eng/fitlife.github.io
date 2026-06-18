@@ -31,6 +31,7 @@ html {
   background: #ff4d4d;
 }
 
+/* HEADER / HERO */
 header {
   background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(230,57,70,0.75) 100%), 
               url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
@@ -55,9 +56,13 @@ header p {
   margin-bottom: 30px;
   text-shadow: 1px 1px 6px black;
 }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 .btn-header {
-  background: #e63946;
-  color: white;
   padding: 14px 32px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -67,11 +72,26 @@ header p {
   transition: 0.3s;
   box-shadow: 0 4px 12px rgba(230,57,70,0.4);
 }
-.btn-header:hover {
+.btn-primary {
+  background: #e63946;
+  color: white;
+}
+.btn-primary:hover {
   background: #ff4d4d;
   transform: scale(1.05);
 }
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid #e63946;
+}
+.btn-secondary:hover {
+  background: #e63946;
+  color: white;
+  transform: scale(1.05);
+}
 
+/* NAV */
 nav {
   background: #111111dd;
   backdrop-filter: blur(12px);
@@ -109,6 +129,7 @@ nav a:hover {
   color: #ff6b6b;
 }
 
+/* SECCIONES */
 section {
   padding: 60px 30px;
   max-width: 1300px;
@@ -170,6 +191,7 @@ h3 {
   margin: 0 auto;
 }
 
+/* SERVICIOS */
 .servicios-list {
   display: flex;
   flex-wrap: wrap;
@@ -197,11 +219,17 @@ h3 {
   margin-bottom: 12px;
   color: white;
 }
+.servicio-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
 .servicio-item:hover {
   transform: translateY(-8px);
   background: #262626;
 }
 
+/* GALERÍA */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -224,6 +252,7 @@ h3 {
   box-shadow: 0 12px 28px rgba(230,57,70,0.3);
 }
 
+/* PLANES */
 .plans-table-wrapper {
   overflow-x: auto;
   margin: 30px 0;
@@ -241,6 +270,7 @@ h3 {
 .plans-table td {
   padding: 18px 15px;
   text-align: center;
+  vertical-align: middle;
   font-weight: 500;
 }
 .plans-table th {
@@ -269,7 +299,30 @@ h3 {
   font-weight: bold;
   display: inline-block;
 }
+.plan-btn {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.25s;
+}
+.plan-btn:hover {
+  background: #e63946;
+  transform: scale(1.05);
+}
+.premium-btn {
+  background: #e63946;
+  color: white;
+}
+.premium-btn:hover {
+  background: #ff4d4d;
+}
 
+/* CTA genérico */
 .cta-button {
   display: inline-block;
   background: #e63946;
@@ -292,10 +345,10 @@ h3 {
   box-shadow: 0 12px 22px rgba(230,57,70,0.6);
 }
 
-/* ========== ESTILOS TARJETAS GIRATORIAS ========== */
+/* ========== TARJETAS DE ENTRENADORES (OPTIMIZADAS) ========== */
 .trainers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
   margin-top: 40px;
   perspective: 1000px;
@@ -304,7 +357,7 @@ h3 {
 .trainer-card {
   background: transparent;
   width: 100%;
-  height: 400px;
+  height: 430px;
   cursor: pointer;
 }
 
@@ -313,13 +366,14 @@ h3 {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   transform-style: preserve-3d;
   border-radius: 28px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.trainer-card:hover .card-inner {
+.trainer-card:hover .card-inner,
+.trainer-card.flipped .card-inner {
   transform: rotateY(180deg);
 }
 
@@ -342,22 +396,44 @@ h3 {
 }
 .card-front img {
   width: 100%;
-  height: 260px;
+  height: 250px;
   object-fit: cover;
 }
 .card-front h4 {
   font-size: 1.5rem;
-  margin: 18px 0 5px;
+  margin: 15px 0 5px;
   color: #ff9f9f;
 }
 .card-front p {
-  padding: 0 15px 20px;
+  padding: 0 15px;
   color: #bbbbbb;
   font-weight: 400;
+  margin-bottom: 8px;
 }
 .card-front i {
   color: #e63946;
   margin-right: 6px;
+}
+.resumen {
+  font-size: 0.9rem;
+  color: #cccccc;
+  padding: 0 15px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.ver-resena {
+  display: inline-block;
+  margin: 10px auto 15px;
+  padding: 6px 16px;
+  background: #e63946;
+  color: white;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.ver-resena:hover {
+  background: #ff4d4d;
 }
 
 /* TRASERA (reseña) */
@@ -380,7 +456,7 @@ h3 {
 }
 .card-back p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #e0e0e0;
   margin-bottom: 20px;
   font-style: italic;
@@ -393,6 +469,35 @@ h3 {
 }
 /* ============================================= */
 
+/* FAQ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.faq-item {
+  background: #1f1f1f;
+  padding: 25px 20px;
+  border-radius: 20px;
+  border-left: 4px solid #e63946;
+  transition: 0.2s;
+}
+.faq-item:hover {
+  background: #2a2a2a;
+}
+.faq-item h4 {
+  color: #ff9f9f;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* CONTACTO */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -420,6 +525,7 @@ h3 {
   font-weight: 500;
 }
 
+/* FOOTER */
 footer {
   background: #0c0c0c;
   padding: 35px 20px;
@@ -442,6 +548,7 @@ footer {
   transform: scale(1.1);
 }
 
+/* RESPONSIVE */
 @media (max-width: 780px) {
   header h1 {
     font-size: 2.6rem;
@@ -449,21 +556,62 @@ footer {
   header p {
     font-size: 1.2rem;
   }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-header {
+    width: 100%;
+    max-width: 300px;
+  }
   nav a {
-    margin: 0 12px;
-    font-size: 0.9rem;
+    margin: 0 10px;
+    font-size: 0.85rem;
   }
   section {
-    padding: 35px 20px;
-    margin: 25px 15px;
+    padding: 30px 15px;
+    margin: 20px 10px;
   }
   h2 {
     font-size: 2rem;
   }
   .trainer-card {
+    height: 400px;
+  }
+  .card-front img {
+    height: 200px;
+  }
+  .plans-table th,
+  .plans-table td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+  .plan-btn {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 100px 15px 80px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .servicio-item {
+    flex: 1 1 100%;
+  }
+  .trainer-card {
     height: 380px;
   }
   .card-front img {
-    height: 220px;
+    height: 180px;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }
